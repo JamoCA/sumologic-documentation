@@ -49,6 +49,12 @@ export const Home = () => {
           isOpenByDefault: false,
           botUrlPath: 'nova',
           showNewChat: true,
+          parentElementId: 'berry-widget-parent',
+          hideToggle: true,
+          isOpenByDefault: true,
+          showResize: false,
+          preventInitialScroll: true,
+          height: 600,
         });
 
         // Inject dark mode styles as needed
@@ -151,12 +157,11 @@ export const Home = () => {
           />
         </Typography>
 
+        <Container id="berry-widget-parent" />
+
         {/* Suggested Questions */}
         <Box sx={{ width: '100%', bgcolor: '#f9f9f9', py: 4 }}>
           <Container maxWidth="md" sx={{ textAlign: 'center' }}>
-            <Typography variant="h5" fontFamily="Lab Grotesque" fontWeight={700} mb={1}>
-              Explore our new chatbot in the lower right corner!
-            </Typography>
             <Typography variant="h5" fontFamily="Lab Grotesque" fontWeight={700} mb={2}>
               Try asking these questions to get started:
             </Typography>
